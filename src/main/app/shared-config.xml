@@ -2,20 +2,20 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns:spring="http://www.springframework.org/schema/beans"
       xsi:schemaLocation="
-http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/3.3/mule.xsd
-http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
 ">
-    <spring:beans>
-        <spring:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-            <spring:property name="ignoreResourceNotFound" value="true"/>
-            <spring:property name="ignoreUnresolvablePlaceholders" value="true"/>
-            <spring:property name="locations">
-                <spring:list>
-                    <spring:value>classpath:mule-config.properties</spring:value>
-                    <!--suppress SpringModelInspection -->
-                    <spring:value>classpath:mule-config-override.properties</spring:value>
-                </spring:list>
-            </spring:property>
-        </spring:bean>
-    </spring:beans>
+  <spring:beans>
+    <spring:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <spring:property name="ignoreResourceNotFound" value="true"/>
+      <spring:property name="ignoreUnresolvablePlaceholders" value="true"/>
+      <spring:property name="locations">
+        <spring:list>
+          <spring:value>classpath:mule-config.properties</spring:value>
+          <!--suppress SpringModelInspection -->
+          <spring:value>classpath:mule-config-override.properties</spring:value>
+        </spring:list>
+      </spring:property>
+    </spring:bean>
+  </spring:beans>
 </mule>
